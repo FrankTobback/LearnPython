@@ -16,4 +16,4 @@ def remove_fails(grade):
 
 
 # comprehension method
-print([grade for grade in grades if grade != 'F'])     
+print([grade for grade in grades if grade != 'F'])
