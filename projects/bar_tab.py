@@ -19,12 +19,13 @@ class Tab:
         self.total += self.menu[item]
 
     def print_bill(self, tax, service):
-        tax = (tax/100) * self.total
-        service = (service/100) * self.total
+        tax = ( tax/100 ) * self.total
+        service = ( service/100 ) * self.total
         total = self.total + tax + service
 
         for item in self.items:
-            # the 20 means that the line is 20 characters long (more precision)
-            print(f'{item:20} ${self.menu[item]}')
+            print(f'{item:20} £{self.menu[item]}')
 
-        print(f'{"Total":20} ${total:.2f}')
+        print(f'{"Tax":20} £{tax:.2f}')
+        print(f'{"Service charge":20} £{service:.2f}')
+        print(f'{"Total":20} £{total:.2f}')
